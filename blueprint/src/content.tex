@@ -1,0 +1,15 @@
+\chapter*{Local verification scope}
+This blueprint records the Lean-oriented development of the v16 manuscript.
+It is a dependency and status map, not a claim that the full five-body theorem
+has been formalized. Archon is used only for deterministic local structural
+linting. External model execution is disabled at the user's request.
+
+A node marked \texttt{leanok} refers to a declaration that has passed the Lean
+compiler. Conditional nodes retain all their stated hypotheses. Open geometric
+bridges are explicitly unproved. The fifteen computational obligation families
+are assumed for the current working phase at the user's request, and are not
+installed as global Lean axioms.
+
+\input{chapters/elementary}
+\input{chapters/conditional}
+\input{chapters/open}

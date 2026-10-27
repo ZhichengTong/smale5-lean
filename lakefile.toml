@@ -1,0 +1,11 @@
+name = "Smale5"
+version = "0.1.0"
+defaultTargets = ["Smale5"]
+
+[[lean_lib]]
+name = "Smale5"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"

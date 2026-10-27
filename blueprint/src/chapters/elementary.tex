@@ -1,0 +1,136 @@
+% archon:covers Smale5/AnalyticEnergy.lean Smale5/Diagram3NormCertificate.lean Smale5/Edges.lean Smale5/Configuration.lean Smale5/Products.lean Smale5/Balance.lean Smale5/ArchonVirial.lean Smale5/QuadraticRecovery.lean Smale5/FiniteFiber.lean Smale5/FourProductFiber.lean Smale5/PairInertia.lean Smale5/TangentEnergy.lean Smale5/Diagram7Inertia.lean
+\chapter{Checked elementary results}
+
+\begin{definition}[Normalized configuration]
+\label{bp:configuration}
+\lean{Smale5.Configuration, Smale5.IsNormalized}
+\leanok
+A configuration has five complex coordinates of each kind, ten inverse
+distances, the two force balance systems, the ten inverse-distance equations,
+and the gauge equating the first coordinate differences.
+The definitions preserve the manuscript's twenty complex coordinates.
+\end{definition}
+
+\begin{lemma}[Four-product identities]
+\label{bp:products}
+\lean{Smale5.product_fourProducts, Smale5.complementary_fourProducts, Smale5.eighthPower_recovery}
+\leanok
+For the ten squared distances $s_e$, let $\Delta=\prod_e s_e$ and let $p_e$
+be $s_e$ times the three disjoint-edge distances. Then
+$\prod_e p_e=\Delta^4$, the complementary product of the $p_e$ equals
+$s_e^2\Delta$, and $s_e^8\prod_f p_f$ is the fourth power of that
+complementary product. These are exact commutative polynomial identities.
+\end{lemma}
+
+\begin{lemma}[Centre of mass]
+\label{bp:center}
+\uses{bp:configuration}
+\lean{Smale5.normalized_centerOfMass_z, Smale5.normalized_centerOfMass_w}
+\leanok
+The normalized balance equations imply both mass-weighted centre identities.
+The proof pairs antisymmetric terms in the finite double sums.
+\end{lemma}
+
+\begin{lemma}[Virial identity]
+\label{bp:virial}
+\uses{bp:configuration}
+\lean{Smale5.virial_pair_sum, Smale5.normalized_potential_eq_inertia}
+\leanok
+For every normalized configuration, the potential equals the inertia:
+$U=I$. No positivity assumption is needed. Multiply each first balance equation
+by its weighted second coordinate, pair the two orientations of every edge,
+and apply the inverse-distance equation. This proof was authored and checked
+in the ongoing local task; the external Archon proving session never ran.
+\end{lemma}
+
+\begin{lemma}[Weighted pair-distance inertia]
+\label{bp:pair-inertia}
+\uses{bp:configuration, bp:center}
+\lean{Smale5.weighted_pair_distance_identity, Smale5.normalized_mass_mul_inertia}
+\leanok
+For any configuration, total mass times inertia equals the weighted sum of
+squared pair distances plus the product of the two weighted coordinate sums.
+For normalized configurations the centre identities remove that product,
+giving $MI=\sum_{i<j}m_i m_j s_{ij}$. This is an exact finite polynomial
+identity; it supplies no asymptotic estimate by itself.
+\end{lemma}
+
+\begin{lemma}[Algebraic tangent energy]
+\label{bp:tangent-energy}
+\uses{bp:configuration}
+\lean{Smale5.normalized_tangent_energy_critical, Smale5.normalized_tangent_virial, Smale5.normalized_tangent_energy_zero}
+\leanok
+At a normalized configuration, the formal directional expressions satisfy
+$2dU+dI=0$ whenever the direction satisfies the linearized distance equations.
+If it also satisfies the linearized first force equations, then $dU=dI$,
+hence $dU=dI=0$. These are finite algebraic statements about the explicitly
+defined directional expressions. Identification with analytic derivatives
+and constancy on an irreducible complex curve remain separate obligations.
+\end{lemma}
+
+\begin{lemma}[Quadratic reconstruction]
+\label{bp:quadratic}
+\lean{Smale5.quadratic_offset_recovery, Smale5.finite_quadratic_roots, Smale5.finite_offset_families}
+\leanok
+For a nonzero fixed gauge difference and fixed squared distances from the
+first two bodies, each coordinate offset satisfies a monic quadratic.
+There are finitely many simultaneous offset choices.
+\end{lemma}
+
+\begin{theorem}[Finite fixed-distance fibre]
+\label{bp:distance-fibre}
+\uses{bp:configuration, bp:center, bp:quadratic}
+\lean{Smale5.finite_normalized_fixed_distances}
+\leanok
+For positive masses and fixed nonzero squared distances, the original
+normalized configuration fibre is finite. The centre identities reconstruct
+the translation coordinates, and each inverse distance has finitely many
+square-root choices. This replaces the manuscript's use of Witt's theorem.
+\end{theorem}
+
+\begin{theorem}[Finite four-product fibre]
+\label{bp:fourproduct-fibre}
+\uses{bp:products, bp:distance-fibre}
+\lean{Smale5.finite_normalized_fixed_fourProducts, Smale5.infinite_normalized_has_nonconstant_fourProduct}
+\leanok
+For positive masses, each normalized fibre with all four-products fixed is
+finite. Hence every infinite set of normalized configurations has a
+four-product taking at least two distinct values. This set-theoretic statement
+does not itself construct a complex algebraic curve or a meromorphic pole.
+\end{theorem}
+
+
+\begin{lemma}[Diagram-7 inertia decomposition]
+\label{bp:d7-inertia}
+\uses{bp:configuration}
+\lean{Smale5.Diagram7.inertia_identity, Smale5.Diagram7.normalized_inertia_identity}
+\leanok
+The manuscript's diagram-7 inertia decomposition is an exact polynomial
+identity: inertia equals the two wing-coordinate contributions, a crossed-force
+torque about the fifth body, and explicit force-residual correction terms.
+For normalized solutions the residual terms vanish. This proves the algebraic
+identity only; it does not prove boundedness of chart coordinates, estimates
+for analytic germs, or local asymptotic vanishing of inertia.
+\end{lemma}
+
+\begin{theorem}[Energy on actual differentiable paths]
+\label{bp:analytic-energy}
+\uses{bp:virial, bp:tangent-energy}
+\lean{Smale5.normalized_path_energy_hasDerivAt_zero, Smale5.normalized_path_energy_constant_Icc}
+\leanok
+Actual coordinatewise differentiation of a normalized path gives zero derivatives
+of potential and inertia. They are constant on a closed real interval when
+coordinates are continuous on it and differentiable in its interior. This code
+was generated with Archon/Codex and then repaired and kernel checked locally.
+\end{theorem}
+
+\begin{theorem}[Public P66 certificate, both families]
+\label{bp:p66-certificate}
+\lean{Smale5.Diagram3Norm.p66_factorization, Smale5.Diagram3Norm.cleared_nine_root_norm, Smale5.Diagram3Norm.rational_nine_root_norm, Smale5.Diagram3Norm.positive_family_root_form_ne_zero, Smale5.Diagram3Norm.p66_negative_decomposition, Smale5.Diagram3Norm.p66_negative_pos, Smale5.Diagram3Norm.negative_family_root_form_ne_zero}
+\leanok
+The 67 published integer coefficients are checked as data: their exact norm
+factorization holds and both family obstructions are nonzero at every
+pair of complex cubic-root labels for positive unequal parameters. For the
+negative argument, a kernel-checked positive-coefficient decomposition proves
+positivity. The preceding fifth-order jet identity is still a separate obligation.
+\end{theorem}

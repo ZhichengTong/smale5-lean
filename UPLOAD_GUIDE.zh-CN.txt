@@ -1,0 +1,61 @@
+GitHub 网页上传教程（公开仓库）
+
+本次整理后的上传目录：F:\Smale5Lean-GitHub
+仓库建议名称：smale5-lean
+
+一、创建公开仓库
+1. 在已登录 GitHub 的 Edge 中打开 https://github.com/new 。
+2. Owner 选择你自己的账号；Repository name 填 smale5-lean。
+3. Description 可填：Lean formalization of algebraic and analytic components of the planar five-body central-configuration finiteness argument.
+4. Visibility 选择 Public。
+5. Add a README file 不勾选，因为上传目录里已经有 README.md。
+6. Add .gitignore 选择 None；Choose a license 选择 None。这两个位置不让 GitHub另建文件，上传目录已有忽略规则与第三方归属说明。
+7. 点击 Create repository。
+
+二、上传全部文件并保留目录结构
+1. 新仓库的 Quick setup 页面中，点击 uploading an existing file。已有文件的仓库则点击 Add file → Upload files。
+2. 打开 Windows 文件资源管理器，在地址栏输入 F:\Smale5Lean-GitHub，然后按 Enter。
+3. 进入这个目录内部，按 Ctrl+A 选中里面全部文件和子文件夹。
+4. 将选中的内容一起拖到 GitHub 上传页的拖放区。拖的是目录内部的内容，不是最外面的 Smale5Lean-GitHub 文件夹。
+5. 等待文件全部列出。Smale5/ 内的 Lean 文件应保留在 Smale5/ 子目录中，不能全部摊平到仓库根目录。
+6. 网页一次最多上传100个文件，单个文件上限25 MiB。本上传目录控制在100个文件以内，每个文件均小于25 MiB。
+7. 若浏览器提示文件过多，暂停检查选择范围：上传目录中不应出现 .lake、.archon、.venv 或 external 目录。不要改为拖入旧的整个 F:\Smale5Formalization-v16。
+
+三、保存提交
+1. 在提交说明中填写：Add checked Lean components for Smale five-body formalization。
+2. 新建的个人仓库可以选择直接提交到 main。
+3. 点击绿色的 Commit changes。若界面先弹出提交说明框，在该框中确认提交。
+4. 等待返回仓库文件列表；出现新提交和文件列表，才表示此次上传完成。
+
+四、核对上传结果
+仓库根目录应直接包含：
+  README.md
+  README.zh-CN.md
+  Smale5.lean
+  Smale5/
+  lean-toolchain
+  lakefile.toml
+  lake-manifest.json
+  scripts/
+  verification/
+  blueprint/
+  manuscript/
+  integration/
+  docs/
+  LICENSES/
+  THIRD_PARTY_NOTICES.md
+  .gitignore
+
+1. 点击 Smale5/，应有20个Lean模块。
+2. 点击 verification/check-summary.json，检查 status 为 passed，模块20，定理121。
+3. 返回仓库首页，README 应显示项目内容和复现命令。
+4. 地址应类似 https://github.com/你的用户名/smale5-lean 。这个地址即可分享。
+5. GitHub提交成功表示文件已保存；完整主定理的当前形式化状态写在 docs/STATUS.md。
+
+五、以后更新
+重新整理并核验本地改动后，在同一仓库使用 Add file → Upload files 上传对应文件。
+如果修改了子目录文件，应连同相应子目录拖入，保持路径与原来一致。每次填写能说明此次修改的提交说明。
+
+官方文档
+创建仓库：https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository
+上传文件：https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository

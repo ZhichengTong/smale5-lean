@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-27T13:17:13.944749+00:00",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "authored_module_count": 20,
+  "audited_theorem_count": 121,
+  "axioms_found": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "whole_main_theorem_proved": false,
+  "source_sha256": {
+    "Smale5.lean": "36a370865f3b286086beec6da207c713fd84d925868d620d290ee9266fd4cfc3",
+    "Smale5/AnalyticEnergy.lean": "44a51cb63cc01eb0388294cab56527ccaffcd3d62d6128d83015864a229808fb",
+    "Smale5/ArchonVirial.lean": "9a0aec8cd37f3e7dab4b5d704738291b8994fe22edb4dea46abb1f79760e9339",
+    "Smale5/Balance.lean": "48528992e713ad2ff42ad62bde4ae7b1dbb6ba29bd47064a0dde6edde944efd1",
+    "Smale5/Configuration.lean": "3cc187846809eec652301075621940349532a362792baa09c98117574c6d868f",
+    "Smale5/Diagram3Elimination.lean": "084ef13fa2a00e351e4f82010a98331da0e81284cd8b80f8b2d27c41c1c41bc6",
+    "Smale5/Diagram3NormCertificate.lean": "28471288c21b5ae4a8e72311b49da61f957a11f2b9d4fb4953534f1c160203c9",
+    "Smale5/Diagram7Inertia.lean": "2d60694d000b91552a2c895713975639c46a640b15b848864438b9fbd08bedf2",
+    "Smale5/Edges.lean": "2ead8e9d68be0f959f451787fb1ca99709241faabffd8fb52900c5ed02782d12",
+    "Smale5/FiniteFiber.lean": "74608ae0d98141efbcc9fcff0e50851002770d1db5224b904311dac6e1bc9801",
+    "Smale5/FourProductFiber.lean": "ea7392e7a026fe61ce737884c9221d63ace34ac082eb2a4be9b7370c4f594682",
+    "Smale5/Global.lean": "95276d5d23f2106df0c0ec075de2a4d7ec679456782764843e7cf253115f3eec",
+    "Smale5/Orders.lean": "7c2b73b063b1ebad3282f422f95d5716f6ce4f86153f3280ecb78d0ef3df1413",
+    "Smale5/PairInertia.lean": "f21286fa53012325c6d0259cff7810e90e339d9f9cbb600da3327a4da0aed1f5",
+    "Smale5/Positivity.lean": "1b5a37701ad21f4244390e6b4326f3cbb11f177eb7e72b8ab7732e09947ef4b7",
+    "Smale5/PrincipalDivisor.lean": "e43b288c4cc668f81860900b2d3711536651d1cc8159adb496a2a3a310f53cc2",
+    "Smale5/Products.lean": "2692eb5e5f24d9478f92e961d7d71968e6a32d9aa06a68c2c9d4c7903546f051",
+    "Smale5/QuadraticRecovery.lean": "44122540b84f908ed6cee2ac069df6332db3e6538ae245b6ae90fe5bc0c5dc72",
+    "Smale5/Symmetry.lean": "b1e8388651b05bddad319cbdee4ba81811112c7013d2899f403797dd2819682c",
+    "Smale5/TangentEnergy.lean": "df58ba5d79b0152eb7e8d7ac1ffaab1c8899061ad0f50aae07c1101286e5d5be",
+    "Smale5/UpstreamBridge.lean": "b5a002fcf1f4e0989e66ef17548e0b6dd1fd0d221e81e992eea5bd75b08d2498"
+  },
+  "dependency_mode": "Lake package overrides"
+}

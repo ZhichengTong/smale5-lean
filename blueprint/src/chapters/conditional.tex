@@ -1,0 +1,53 @@
+% archon:covers Smale5/UpstreamBridge.lean Smale5/Orders.lean Smale5/Global.lean Smale5/PrincipalDivisor.lean
+\chapter{Checked implications with explicit premises}
+
+\begin{lemma}[Order arithmetic]
+\label{bp:order-arithmetic}
+\uses{bp:products}
+\lean{Smale5.sum_fourOrders, Smale5.exists_negative_fourOrder, Smale5.diagram9_totalOrder_pos, Smale5.diagram9_unbounded_fourProducts}
+\leanok
+The sum of the ten four-product orders is four times the total distance
+order. A negative total order forces a negative four-product order.
+The supplied diagram-9 order pattern gives positive total order and negative
+orders for the specified four-products. This verifies consequences of the
+pattern, not the analytic classification that supplies the pattern.
+\end{lemma}
+
+\begin{lemma}[Degree-zero arithmetic]
+\label{bp:degree-zero-arithmetic}
+\lean{Smale5.exists_negative_of_sum_zero_of_positive, Smale5.zero_has_pole_of_degree_zero}
+\leanok
+For an order function supported on a finite set with total sum zero, a
+positive value forces a negative value. Finite support and degree zero
+are explicit hypotheses; no geometric principal-divisor theorem is assumed
+as a new Lean axiom.
+\end{lemma}
+
+\begin{theorem}[Conditional global contradiction]
+\label{bp:conditional-global}
+\uses{bp:order-arithmetic, bp:degree-zero-arithmetic}
+\lean{Smale5.globalOrderContradiction, Smale5.globalOrderContradiction_from_degreeZero, Smale5.finite_of_order_reduction}
+\leanok
+Suppose an initial four-product pole exists, every four-product pole forces
+a positive total order, and a positive total order forces a negative one.
+The order arithmetic gives a contradiction. The version using finite support
+and degree zero proves the second implication from those premises.
+The general finiteness reduction additionally assumes that an infinite set
+produces such order data. The required data have not yet been constructed
+for the five-body configuration space.
+\end{theorem}
+
+\begin{theorem}[Adapter to the published upstream main theorem]
+\label{bp:upstream-adapter}
+\uses{bp:configuration, bp:distance-fibre}
+\lean{Smale5.positive_normalized_isCC, Smale5.finite_positive_normalized_similar, Smale5.finite_positive_normalized_of_upstream, Smale5.fiveBodyFiniteness_of_upstream}
+\leanok
+Positive normalized configurations satisfy the genuine Newtonian central
+configuration equations. Similar normalized configurations have identical
+mutual distances; each similarity class therefore has a finite normalized
+fibre. The literal upstream all-positive-mass finiteness theorem implies the
+project's exact FiveBodyFiniteness target. That upstream theorem is an explicit
+argument here, not an axiom or a claim that the expensive external project
+has already been rebuilt locally. The separate integration source applies
+the published CC5Full main theorem.
+\end{theorem}

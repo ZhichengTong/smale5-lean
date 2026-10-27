@@ -1,0 +1,111 @@
+{
+  "method": "lake env lean -o",
+  "exit_code": 0,
+  "modules": [
+    {
+      "module": "Smale5.Edges",
+      "exit_code": 0,
+      "seconds": 5.64
+    },
+    {
+      "module": "Smale5.Products",
+      "exit_code": 0,
+      "seconds": 5.62
+    },
+    {
+      "module": "Smale5.Configuration",
+      "exit_code": 0,
+      "seconds": 5.22
+    },
+    {
+      "module": "Smale5.Balance",
+      "exit_code": 0,
+      "seconds": 5.23
+    },
+    {
+      "module": "Smale5.QuadraticRecovery",
+      "exit_code": 0,
+      "seconds": 5.14
+    },
+    {
+      "module": "Smale5.FiniteFiber",
+      "exit_code": 0,
+      "seconds": 5.52
+    },
+    {
+      "module": "Smale5.FourProductFiber",
+      "exit_code": 0,
+      "seconds": 5.22
+    },
+    {
+      "module": "Smale5.Positivity",
+      "exit_code": 0,
+      "seconds": 5.25
+    },
+    {
+      "module": "Smale5.Orders",
+      "exit_code": 0,
+      "seconds": 5.38
+    },
+    {
+      "module": "Smale5.Global",
+      "exit_code": 0,
+      "seconds": 5.2
+    },
+    {
+      "module": "Smale5.PrincipalDivisor",
+      "exit_code": 0,
+      "seconds": 5.28
+    },
+    {
+      "module": "Smale5.Diagram3Elimination",
+      "exit_code": 0,
+      "seconds": 5.48
+    },
+    {
+      "module": "Smale5.Symmetry",
+      "exit_code": 0,
+      "seconds": 5.34
+    },
+    {
+      "module": "Smale5.ArchonVirial",
+      "exit_code": 0,
+      "seconds": 7.05
+    },
+    {
+      "module": "Smale5.PairInertia",
+      "exit_code": 0,
+      "seconds": 5.52
+    },
+    {
+      "module": "Smale5.TangentEnergy",
+      "exit_code": 0,
+      "seconds": 7.77
+    },
+    {
+      "module": "Smale5.Diagram7Inertia",
+      "exit_code": 0,
+      "seconds": 10.42
+    },
+    {
+      "module": "Smale5.AnalyticEnergy",
+      "exit_code": 0,
+      "seconds": 5.91
+    },
+    {
+      "module": "Smale5.Diagram3NormCertificate",
+      "exit_code": 0,
+      "seconds": 37.03
+    },
+    {
+      "module": "Smale5.UpstreamBridge",
+      "exit_code": 0,
+      "seconds": 6.95
+    },
+    {
+      "module": "Smale5",
+      "exit_code": 0,
+      "seconds": 5.2
+    }
+  ]
+}

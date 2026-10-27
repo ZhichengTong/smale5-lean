@@ -1,0 +1,64 @@
+\chapter{Open bridges and the final target}
+
+\begin{definition}[Computational inputs for the current phase]
+\label{bp:computational-inputs}
+The fifteen computational obligation families listed in the project report
+are assumed at the user's request for the current conditional development.
+They include specified diagram-2, diagram-3 and diagram-6 classifications,
+jet identities, nonvanishing and isolation assertions. The public v10 repository has now been located and all declared Python
+checks replay successfully. Except for the P66 subset, these computations
+have not been replayed in Lean and are not global Lean axioms.
+\end{definition}
+
+\begin{theorem}[Positive algebraic curve bridge: open]
+\label{bp:curve-bridge}
+\uses{bp:configuration, bp:fourproduct-fibre, bp:virial, bp:tangent-energy, bp:analytic-energy}
+\notready
+The outstanding construction must take an infinite positive normalized locus
+to a suitable irreducible complex curve, prove constancy of the potential on
+that curve, and retain a positive nonzero value. The checked identity $U=I$
+and the newly checked differentiable-path constancy theorem do not yet
+establish global constancy on every irreducible algebraic curve. Nash-arc,
+Zariski-closure and connectedness arguments remain geometric obligations.
+\end{theorem}
+
+\begin{theorem}[Completion and order bridge: open]
+\label{bp:completion-bridge}
+\uses{bp:curve-bridge, bp:fourproduct-fibre}
+\notready
+Construct one completed normalized curve and its consistent meromorphic order
+functions. Prove finite support, degree zero, and that a nonconstant
+four-product has a pole. Relate the local Puiseux parameters to those orders;
+when using finite covers, prove the positive ramification factor that permits
+orders from different local charts to be compared on the same original curve.
+\end{theorem}
+
+\begin{theorem}[Local diagram bridge: open]
+\label{bp:local-bridge}
+\uses{bp:computational-inputs, bp:completion-bridge, bp:order-arithmetic, bp:pair-inertia, bp:d7-inertia}
+\notready
+Formalize the external sixteen-diagram classification and the required local
+alternatives, including boundedness restricted to diagrams 10--16 and the
+separate diagram-9 estimate. Show that every four-product pole gives a positive
+total distance order. The accepted computational inputs do not replace the
+unwritten geometric links between chart solutions, germs and global orders.
+In particular, the checked diagram-7 polynomial decomposition still needs
+the local estimates that make its terms tend to zero in the required regime.
+\end{theorem}
+
+\begin{theorem}[Five-body finiteness: final target, open]
+\label{bp:main-target}
+\uses{bp:conditional-global, bp:completion-bridge, bp:local-bridge, bp:upstream-adapter}
+\lean{Smale5.FiveBodyFiniteness}
+\notready
+For each positive mass vector, the set of positive normalized configurations
+is finite. The Lean name here denotes a proposition definition, not a proved
+theorem. Even under the accepted computational inputs, the curve, completion
+and local-diagram bridges above remain to be proved. Equivalence with the
+original physical problem modulo translations, rotations and positive scaling
+is partly supplied by the checked upstream adapter. The independent complete
+upstream proof is a different route; its full local certificate rebuild and
+final integration check remain separately tracked.
+\end{theorem}
+
+
