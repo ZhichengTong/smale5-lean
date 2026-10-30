@@ -1,0 +1,11 @@
+.lake/
+.archon/
+.venv/
+__pycache__/
+*.pyc
+*.aux
+*.log
+!verification/axioms.log
+*.out
+*.toc
+*.synctex.gz
